@@ -1,0 +1,14 @@
+{
+  "name": "jsusedocs-core",
+  "version": "1.0.0",
+  "description": "Alibary for interacting with jsdocs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ewrdad",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
