@@ -1,5 +1,3 @@
-
-
 /**
  * @alias includesDoc
  * @description Checks if a given string includes a valid doc
@@ -8,18 +6,17 @@
  * @returns {boolean} If it includes a doc
  */
 export const includesDoc = (possibleDocString, strict) => {
-    try {
-        if(strict){
-
-            const hasDocStart = possibleDocString.includes("/**")
-            const hasDocTag = possibleDocString.includes("@")
-            const hasDocEnd = possibleDocString.includes("*/")
-            return hasDocEnd && hasDocStart && hasDocTag
-        }
-
-        const hasDocStart = possibleDocString.includes("/**")
-        return hasDocStart
-    } catch (unexpectedError) {
-        throw new Error(unexpectedError)
+  try {
+    if (strict) {
+      const hasDocStart = possibleDocString.includes("/**");
+      const hasDocTag = possibleDocString.includes("@");
+      const hasDocEnd = possibleDocString.includes("*/");
+      return hasDocEnd && hasDocStart && hasDocTag;
     }
-}
+
+    const hasDocStart = possibleDocString.includes("/**");
+    return hasDocStart;
+  } catch (unexpectedError) {
+    throw new Error(unexpectedError);
+  }
+};
