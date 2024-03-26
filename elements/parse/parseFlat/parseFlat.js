@@ -10,23 +10,21 @@ import fse from "fs-extra";
  */
 const findRelatedFunc = (i, lines) => {
   //itterate over lines
-  //if line contains { incriment counter if it contains } decriment counter
+  //adds number of { in line to counter
+  //subtracts number of } in line from counter
   //if counter is 0 return the function string
   let counter = 0;
   let func = "dummy";
   for (let j = i + 1; j < lines.length; j++) {
     const line = lines[j];
     func += line + "\n";
-    if (line.includes("{")) {
-      counter++;
+    const openBraces = line.match(/{/g) || [];
+    const closeBraces = line.match(/}/g) || [];
+    counter += openBraces.length;
+    counter -= closeBraces.length;
+    if (counter == 0) {
+      return func;
     }
-    if (line.includes("}")) {
-      counter--;
-      if (counter == 0) {
-        return func;
-      }
-    }
-    console.log(counter);
   }
 };
 
