@@ -1,5 +1,6 @@
 import { isDoc } from "./elements/checks/isDoc/isDoc";
 import { includesDoc } from "./elements/checks/includesDoc/includesDoc";
+import { parseDocString } from "./elements/parse/parseDocString/parseDocString";
 
 /**
  * @title JsUseDocs-Core
@@ -18,4 +19,5 @@ export default JsUseDocsCore = {
   setTags: "Not implemented yet",
   parseNested: "Not implemented yet",
   parseNestedSummary: "Not implemented yet",
+  parseDocString,
 };

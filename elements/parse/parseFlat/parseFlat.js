@@ -1,5 +1,7 @@
 import fse from "fs-extra";
 
+//TODO: test this function
+
 /**
  * @alias findRelatedFunc
  * @description Finds the related function to a doc by taking the line number of the doc and the lines of the file
@@ -33,6 +35,8 @@ const findRelatedFunc = (i, lines) => {
  * @description Parses a js doc to extract the docs and related functions
  * @param {string} filePath A path to a js file to scan for docs
  * @returns {Array} An array of docs in the file
+ *
+ *
  *
  */
 export const parseFlat = (filePath) => {
