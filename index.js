@@ -1,6 +1,8 @@
 import { isDoc } from "./elements/checks/isDoc/isDoc";
 import { includesDoc } from "./elements/checks/includesDoc/includesDoc";
 import { parseDocString } from "./elements/parse/parseDocString/parseDocString";
+import { parseFlat } from "./elements/parse/parseFlat/parseFlat";
+import { parseFlatSummary } from "./elements/parse/parseFlatSummary/parseFlatSummary";
 
 /**
  * @title JsUseDocs-Core
@@ -9,9 +11,8 @@ import { parseDocString } from "./elements/parse/parseDocString/parseDocString";
  * @returns JsUseDocsCore functions
  */
 const JsUseDocsCore = {
-  parseFlat: "Not implemented yet",
-  parseFlatSummary: "Not implemented yet",
-  parseTags: "Not implemented yet",
+  parseFlat,
+  parseFlatSummary,
   isDoc ,
   includesDoc,
   addTag: "Not implemented yet",
@@ -21,5 +22,5 @@ const JsUseDocsCore = {
   parseNestedSummary: "Not implemented yet",
   parseDocString,
 };
-export { isDoc, includesDoc, parseDocString };
+export { isDoc, includesDoc, parseDocString, parseFlat, parseFlatSummary};
 export default JsUseDocsCore;
