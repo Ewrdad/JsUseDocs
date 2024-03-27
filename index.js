@@ -8,11 +8,11 @@ import { parseDocString } from "./elements/parse/parseDocString/parseDocString";
  * @description JsUseDocs-Core is a core library for JsUseDocs in js
  * @returns JsUseDocsCore functions
  */
-export default JsUseDocsCore = {
+const JsUseDocsCore = {
   parseFlat: "Not implemented yet",
   parseFlatSummary: "Not implemented yet",
   parseTags: "Not implemented yet",
-  isDoc,
+  isDoc ,
   includesDoc,
   addTag: "Not implemented yet",
   removeTag: "Not implemented yet",
@@ -21,3 +21,5 @@ export default JsUseDocsCore = {
   parseNestedSummary: "Not implemented yet",
   parseDocString,
 };
+export { isDoc, includesDoc, parseDocString };
+export default JsUseDocsCore;

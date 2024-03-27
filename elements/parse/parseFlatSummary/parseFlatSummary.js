@@ -14,6 +14,7 @@ export const parseFlatSummary = (filePath, returnFunc) => {
     const lines = file.split("\n");
     const docs = [];
     let doc = "";
+    
 
     //Itterate over the file
     //Check if line stats with /**
